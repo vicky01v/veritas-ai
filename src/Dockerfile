@@ -121,6 +121,7 @@ COPY --from=builder /app/client/public ./public
 COPY --from=builder /app/client/.next/static ./.next/static
 COPY --from=builder /app/client/prisma ./prisma
 COPY --from=builder /app/client/scripts ./scripts
+COPY ./assets/otel-collector-config.yaml /etc/otel/otel-collector-config.yaml
 # Copying prisma client, prisma and prisma cli (.bin) from builder stage
 COPY --from=builder /app/client/node_modules/@prisma ./node_modules/@prisma
 COPY --from=builder /app/client/node_modules/.bin ./node_modules/.bin
