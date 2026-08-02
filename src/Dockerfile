@@ -9,6 +9,7 @@ RUN apk add --no-cache rust cargo build-base openssl
 
 # Set the working directory in the container
 WORKDIR /app/client
+RUN mkdir -p /app/client/data
 
 # Copy package.json and package-lock.json to the working directory & the rest of the application code
 COPY ./client/ .
