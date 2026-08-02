@@ -110,6 +110,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Set the working directory in the container
 WORKDIR /app/client
 
+RUN mkdir -p /app/client/data
+
 # Copy only necessary files from the builder stages
 
 # Copying the standalone next.js build
